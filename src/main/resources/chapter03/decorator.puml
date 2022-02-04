@@ -1,0 +1,13 @@
+@startuml
+object "Component" as c
+object "ConcreteComponent" as cc
+object "Decorator" as d
+object "ConcreteDecoratorA" as cda
+object "ConcreteDecoratorB" as cdb
+
+cc -up-> c
+d -up-> c
+cda -up-> d
+cdb -up-> d
+
+@enduml
