@@ -1,0 +1,36 @@
+@startuml
+interface "Subject" as s {
+    registerObserve()
+    removeObserve()
+    notifyObserve()
+}
+
+interface "Observer" as o {
+update();
+}
+
+
+class "ConcreteSubject" as cs implements s  {
+   registerObserve()
+   removeObserve()
+   notifyObserve()
+
+   getState()
+   setState()
+}
+
+
+class "ConcreteObserve" as co implements  o {
+update()
+// 기타 옵저버용 메서드()
+}
+
+s -right-> o : 옵저버
+co -left-> cs : 주제
+
+note left of cs::setState
+주제 클래스에는 상태를 설정하고 알아내기 위한
+세터/게터 메소드가 들어있을 수도 있습니다.
+end note
+
+@enduml
