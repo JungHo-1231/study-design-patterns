@@ -1,0 +1,34 @@
+@startuml
+object "PizzaStore" as ps {
+orderPizza()
+}
+
+object "SimplePizzaFactory" as spf {
+createPizza()
+}
+
+object "Pizza" as  p {
+prepare()
+bake()
+cut()
+box()
+}
+
+object "CheesePizza" as cp
+object "VeggiePizza" as vp
+object "ClamPizza" as lp
+object "PepperoniPizza" as pp
+
+
+
+ps -right-> spf
+spf -right-> p
+
+
+cp -up-> p
+vp -up-> p
+lp -up-> p
+pp -up-> p
+
+
+@enduml
