@@ -1,0 +1,17 @@
+@startuml
+object "Client" as c
+interface "Target" as t {
+request()
+}
+class Adapter implements t {
+request()
+}
+object "Adaptee" as ae {
+specificRequest()
+}
+
+c -right-> t
+Adapter -right-> ae
+
+
+@enduml
