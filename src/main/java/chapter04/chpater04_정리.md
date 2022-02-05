@@ -11,6 +11,7 @@
 - 책임
     - factory 는 객체 생성의 책임을 갖는다.
 - 협력
+    - Pizzasotre -> SimplePizzaFactory -> Pizza (역할)
 - 역할
     - PizzaStore(추상클래스), Pizza(추상 클래스)
 

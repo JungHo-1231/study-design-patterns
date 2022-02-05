@@ -11,8 +11,9 @@
 
 - 책임
     - Client 는 ConcreteCommand 와 Recevier 를 설정할 책임을 갖습니다.
-    - Invokek 는 Command 를 가지고 있으며 execute 메서드롤 호출에 해당 로직을 실행할 책임을 갖습니다.
+    - Invoker 는 Command 를 가지고 있으며 execute 메서드롤 호출에 해당 로직을 실행할 책임을 갖습니다.
     - Command 는 모든 커멘드 객체에서 구현해야 하는 인터페이스입니다. 
     - ConcreteCommand 는 특정 행동과 리서버 사이를 연결해줍니다. 
 - 협력
+  - client -> reveiver -> concreateConmmand 
 - 역할
