@@ -1,0 +1,21 @@
+@startuml
+
+object "Client" as c
+object "Receiver" as r
+object "ConcreteCommand" as cc
+object "Invoker" as i
+interface "Command" as ic
+
+c -right-> r
+cc -left-> r
+c -right-> cc
+
+i -right-> ic
+cc -up-> ic
+
+note top of c
+클라이언트는 "ConcreteCommand" 를 생성하고
+"Receiver"를 설정합니다.
+end note
+
+@enduml
