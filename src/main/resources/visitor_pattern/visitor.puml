@@ -1,0 +1,32 @@
+@startuml
+interface "Visitor" as v {
++ visite(e: ElementA)
++ visite(e: ElementB)
+}
+
+class ConcreteVisitors implements v{
++ visite(e: ElementA)
++ visite(e: ElementB)
+}
+
+interface "Element" as e {
++ accpet(v: Visitor)
+}
+
+class ElementA implements e{
++ accpet(v: Visitor)
+}
+
+class ElementB implements e{
++ accpet(v: Visitor)
+}
+
+note bottom of ElementB : v.visit(this)
+note bottom of ElementA : v.visit(this)
+
+e -left-> v
+
+
+v::visite ..> ElementA
+v::visite ..> ElementB
+@enduml
